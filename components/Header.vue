@@ -1,6 +1,8 @@
 <template>
+
 <v-card>
   <v-layout>
+     
     <!-- <v-system-bar color="deep-purple darken-3"></v-system-bar> -->
 
     <v-app-bar color="primary" prominent>
@@ -38,8 +40,11 @@
   </v-layout>
 </v-card>
 </template>
-<script lang="ts">
 
+<script lang="ts">
+definePageMeta({
+  title: 'Some Page'
+})
 export default {
   data: () => ({
     drawer: false,
