@@ -1,8 +1,12 @@
 <template>
-<v-list class="d-flex flex-fill hidden-md-and-down" :items="items" nav></v-list>
+ <v-list nav>
+        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/services">Services</NuxtLink>
+        <NuxtLink to="/locations">Locations</NuxtLink>
+        <NuxtLink to="/contact">Contact</NuxtLink>
+        <NuxtLink to="/careers">Careers</NuxtLink>
+</v-list>
 </template>
 <script lang="ts">
-export default{
-    props: ['items'],
-}
+
 </script>

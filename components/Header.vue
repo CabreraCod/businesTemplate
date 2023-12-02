@@ -1,6 +1,6 @@
 <template>
-
-<v-card>
+<nav>
+  <v-card>
   <v-layout>
      
     <!-- <v-system-bar color="deep-purple darken-3"></v-system-bar> -->
@@ -18,8 +18,8 @@
         ></v-img>
     </v-avatar>
       <v-toolbar-title>Color esperanza</v-toolbar-title>
-      <LayoutNavInlineMenu :items="items">
-    </LayoutNavInlineMenu>
+     
+    <LayoutNavInlineMenu />
       
       <v-spacer></v-spacer>
      
@@ -27,46 +27,20 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" location="top" temporary>
-      <v-list :items="items"></v-list>
-    </v-navigation-drawer>
-
-    <v-main style="height: 500px">
-      <v-card-text>
-        The navigation drawer will appear from the bottom on smaller size
-        screens.
-       
-      </v-card-text>
-    </v-main>
+    <LayoutNavInlineMenu />      
+    </v-navigation-drawer>   
   </v-layout>
-</v-card>
+  </v-card>
+</nav>
+
 </template>
 
 <script lang="ts">
-definePageMeta({
-  title: 'Some Page'
-})
 export default {
   data: () => ({
     drawer: false,
     group: null,
-    items: [
-      {
-        title: 'Foo',
-        value: 'foo',
-      },
-      {
-        title: 'Bar',
-        value: 'bar',
-      },
-      {
-        title: 'Fizz',
-        value: 'fizz',
-      },
-      {
-        title: 'Buzz',
-        value: 'buzz',
-      },
-    ],
+   
   }),
 
   watch: {
